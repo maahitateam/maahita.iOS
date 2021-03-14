@@ -1,0 +1,823 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4A0670A024D1C10C0098683A /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A06709F24D1C10C0098683A /* UITextField+Extensions.swift */; };
+		4A0670A224D1D6A50098683A /* MaahitaAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0670A124D1D6A50098683A /* MaahitaAlertView.swift */; };
+		4A0670A424D1F69E0098683A /* SessionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0670A324D1F69E0098683A /* SessionRequest.swift */; };
+		4A0670A624D22B6C0098683A /* SessionActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0670A524D22B6C0098683A /* SessionActionCell.swift */; };
+		4A0670A824D2CE360098683A /* AttachmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0670A724D2CE360098683A /* AttachmentCell.swift */; };
+		4A0670AA24D33C160098683A /* Data+ImageToPDFConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0670A924D33C160098683A /* Data+ImageToPDFConverter.swift */; };
+		4A0BB9922471C385008F4682 /* SessionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0BB9912471C385008F4682 /* SessionsViewModel.swift */; };
+		4A0BB9952471C415008F4682 /* GenericDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0BB9942471C415008F4682 /* GenericDataSource.swift */; };
+		4A0BB9972471C43D008F4682 /* DynamicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0BB9962471C43D008F4682 /* DynamicValue.swift */; };
+		4A0BB99C2471C725008F4682 /* SessionsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0BB99B2471C725008F4682 /* SessionsDataSource.swift */; };
+		4A1DFB1B2469B7860043EB3F /* Comfortaa-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4A1DFB182469B7860043EB3F /* Comfortaa-Bold.ttf */; };
+		4A1DFB1C2469B7860043EB3F /* Comfortaa-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4A1DFB192469B7860043EB3F /* Comfortaa-Regular.ttf */; };
+		4A1DFB1D2469B7860043EB3F /* Comfortaa-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4A1DFB1A2469B7860043EB3F /* Comfortaa-Light.ttf */; };
+		4A1DFB1F2469BA5D0043EB3F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A1DFB1E2469BA5D0043EB3F /* GoogleService-Info.plist */; };
+		4A1DFB262469F51A0043EB3F /* SessionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1DFB252469F51A0043EB3F /* SessionsViewController.swift */; };
+		4A1DFB29246A086E0043EB3F /* UIColor_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1DFB28246A086E0043EB3F /* UIColor_Extension.swift */; };
+		4A1DFB2B246A08C00043EB3F /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1DFB2A246A08C00043EB3F /* UICollectionView+Extension.swift */; };
+		4A1DFB2E246A09FF0043EB3F /* SessionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1DFB2D246A09FF0043EB3F /* SessionsService.swift */; };
+		4A1DFB33246A0A930043EB3F /* SessionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1DFB32246A0A930043EB3F /* SessionCell.swift */; };
+		4A1DFB36246A14880043EB3F /* MaahitaSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1DFB35246A14880043EB3F /* MaahitaSession.swift */; };
+		4A1DFB38246AD2E10043EB3F /* SessionsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1DFB37246AD2E10043EB3F /* SessionsHeaderView.swift */; };
+		4A1DFB3B246ADAD50043EB3F /* SessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1DFB3A246ADAD50043EB3F /* SessionViewModel.swift */; };
+		4A1DFB3D246B16060043EB3F /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1DFB3C246B16060043EB3F /* UserProfileView.swift */; };
+		4A1DFB3F246B17FC0043EB3F /* ProfilePicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1DFB3E246B17FC0043EB3F /* ProfilePicView.swift */; };
+		4A1DFB41246B1E470043EB3F /* UICollectionviewOverlappingLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1DFB40246B1E470043EB3F /* UICollectionviewOverlappingLayout.swift */; };
+		4A1DFB43246CAF5A0043EB3F /* DashboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1DFB42246CAF5A0043EB3F /* DashboardCell.swift */; };
+		4A1DFB45246CB1340043EB3F /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1DFB44246CB1340043EB3F /* StatsView.swift */; };
+		4A1DFB47246CBBD30043EB3F /* LiveSessionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1DFB46246CBBD30043EB3F /* LiveSessionCell.swift */; };
+		4A1DFB4D246CC0180043EB3F /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1DFB4C246CC0180043EB3F /* Date+Extension.swift */; };
+		4A1DFB4F246CC6130043EB3F /* PaddedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1DFB4E246CC6130043EB3F /* PaddedLabel.swift */; };
+		4A1DFB51246D05070043EB3F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1DFB50246D05070043EB3F /* LoginViewController.swift */; };
+		4A1DFB53246D06B50043EB3F /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1DFB52246D06B50043EB3F /* SessionViewController.swift */; };
+		4A1DFB55246D3A450043EB3F /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1DFB54246D3A450043EB3F /* UserProfileViewController.swift */; };
+		4A1DFB57246D75110043EB3F /* MaahitaTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1DFB56246D75110043EB3F /* MaahitaTextField.swift */; };
+		4A1DFB59246D75570043EB3F /* UITextFiled+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1DFB58246D75570043EB3F /* UITextFiled+Extension.swift */; };
+		4A1DFB5B246E93BF0043EB3F /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1DFB5A246E93BF0043EB3F /* RegisterViewController.swift */; };
+		4A2BB7B12472D28800DD55C6 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2BB7B02472D28800DD55C6 /* UIView+Extension.swift */; };
+		4A2BB7B32473D87B00DD55C6 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2BB7B22473D87B00DD55C6 /* UIImage+Extension.swift */; };
+		4A2BB7B5247414D200DD55C6 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2BB7B4247414D200DD55C6 /* AlertViewController.swift */; };
+		4A2BB7B824745FC300DD55C6 /* Comfortaa-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4A2BB7B624745FC200DD55C6 /* Comfortaa-SemiBold.ttf */; };
+		4A2BB7B924745FC300DD55C6 /* Comfortaa-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4A2BB7B724745FC300DD55C6 /* Comfortaa-Medium.ttf */; };
+		4A2BB7BB247476CC00DD55C6 /* SessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2BB7BA247476CC00DD55C6 /* SessionView.swift */; };
+		4A2BB7BD2474808600DD55C6 /* PanCloseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2BB7BC2474808600DD55C6 /* PanCloseViewController.swift */; };
+		4A2BB7C024751D0400DD55C6 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2BB7BF24751D0400DD55C6 /* Strings.swift */; };
+		4A2BB7C224754DD700DD55C6 /* SessionDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2BB7C124754DD700DD55C6 /* SessionDetailViewModel.swift */; };
+		4A2BB7C424755C7C00DD55C6 /* MaahitaUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2BB7C324755C7C00DD55C6 /* MaahitaUser.swift */; };
+		4A2BB7C624755DC900DD55C6 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2BB7C524755DC900DD55C6 /* UserService.swift */; };
+		4ABFE3CA245C8F80008A66FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABFE3C9245C8F80008A66FA /* AppDelegate.swift */; };
+		4ABFE3D3245C8F86008A66FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ABFE3D2245C8F86008A66FA /* Assets.xcassets */; };
+		4ABFE3D6245C8F86008A66FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ABFE3D4245C8F86008A66FA /* LaunchScreen.storyboard */; };
+		4AD3E5CB24A4FB4400C454DB /* UserProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD3E5CA24A4FB4400C454DB /* UserProfileCell.swift */; };
+		4AEA12A8246EA6C000764785 /* UserAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEA12A7246EA6C000764785 /* UserAuthService.swift */; };
+		4AEA12AA246EBC2300764785 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEA12A9246EBC2300764785 /* UIImageView.swift */; };
+		4AEA12AC246EC83400764785 /* SessionViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEA12AB246EC83400764785 /* SessionViewProtocol.swift */; };
+		4AEA12AE246F23DE00764785 /* MeetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEA12AD246F23DE00764785 /* MeetingViewController.swift */; };
+		4AEA12B4247067B800764785 /* ReloginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEA12B3247067B800764785 /* ReloginViewController.swift */; };
+		4AEA12B624707A5500764785 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEA12B524707A5500764785 /* UIViewController+Extension.swift */; };
+		4AEA12B824707E9500764785 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEA12B724707E9500764785 /* UIFont+Extension.swift */; };
+		4AFAE2FB24770EEA008D64BE /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFAE2FA24770EEA008D64BE /* FeedbackViewController.swift */; };
+		4AFAE2FD24771840008D64BE /* FeedbackRequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFAE2FC24771840008D64BE /* FeedbackRequestCell.swift */; };
+		4AFAE2FF24785338008D64BE /* DashboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFAE2FE24785338008D64BE /* DashboardService.swift */; };
+		4AFAE30124785771008D64BE /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFAE30024785771008D64BE /* DashboardViewModel.swift */; };
+		4AFAE3032478758C008D64BE /* HeaderViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFAE3022478758C008D64BE /* HeaderViewDataSource.swift */; };
+		4AFAE30524787602008D64BE /* SessionsHeaderDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFAE30424787602008D64BE /* SessionsHeaderDataSource.swift */; };
+		4AFAE307247879A8008D64BE /* SessionsHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFAE306247879A8008D64BE /* SessionsHeaderViewModel.swift */; };
+		4AFAE30924791182008D64BE /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFAE30824791182008D64BE /* Dashboard.swift */; };
+		4AFAE30B24797008008D64BE /* CosmosDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFAE30A24797008008D64BE /* CosmosDistrib.swift */; };
+		4AFAE30D2479724A008D64BE /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFAE30C2479724A008D64BE /* UITableView+Extension.swift */; };
+		4AFAE30F24797375008D64BE /* SessionFeedbackDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFAE30E24797375008D64BE /* SessionFeedbackDataSource.swift */; };
+		4AFAE311247973CC008D64BE /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFAE310247973CC008D64BE /* Feedback.swift */; };
+		4AFAE31324797422008D64BE /* FeedbackCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFAE31224797422008D64BE /* FeedbackCellViewModel.swift */; };
+		4AFAE31524797654008D64BE /* FeedbackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFAE31424797654008D64BE /* FeedbackCell.swift */; };
+		4AFAE31924798A17008D64BE /* FeedbackDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFAE31824798A17008D64BE /* FeedbackDataSource.swift */; };
+		4AFAE31B24798CC9008D64BE /* FeedbackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFAE31A24798CC9008D64BE /* FeedbackViewModel.swift */; };
+		4AFAE31D24799258008D64BE /* FeedbackService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFAE31C24799258008D64BE /* FeedbackService.swift */; };
+		4AFD178924C52B410084A1FC /* SessionsHeaderCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFD178824C52B410084A1FC /* SessionsHeaderCollectionView.swift */; };
+		4AFD178B24C5302C0084A1FC /* NavigationUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFD178A24C5302C0084A1FC /* NavigationUtility.swift */; };
+		4AFD186E24C79FC40084A1FC /* CompletedSessionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFD186D24C79FC40084A1FC /* CompletedSessionsViewController.swift */; };
+		4AFD18CF24CF64030084A1FC /* SessionPresenterControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFD18CE24CF64030084A1FC /* SessionPresenterControl.swift */; };
+		4AFD18D124CF67D70084A1FC /* AddSessionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFD18D024CF67D70084A1FC /* AddSessionCell.swift */; };
+		4AFD18D324CF69F80084A1FC /* SessionRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFD18D224CF69F80084A1FC /* SessionRequestViewController.swift */; };
+		86FCF3A25351DCE9CD2F9AB0 /* Pods_maahita.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB573690682B5F61DE566C28 /* Pods_maahita.framework */; };
+		C193943324F2E4AB00BDB3BD /* SessionFeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C193943224F2E4AB00BDB3BD /* SessionFeedbackView.swift */; };
+		C1E644522527DC3200F1E636 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E644512527DC3200F1E636 /* HomeViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		462C20EAE9E1D9B0E86EB0C7 /* Pods-maahita.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-maahita.release.xcconfig"; path = "Target Support Files/Pods-maahita/Pods-maahita.release.xcconfig"; sourceTree = "<group>"; };
+		4A06709F24D1C10C0098683A /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
+		4A0670A124D1D6A50098683A /* MaahitaAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaahitaAlertView.swift; sourceTree = "<group>"; };
+		4A0670A324D1F69E0098683A /* SessionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionRequest.swift; sourceTree = "<group>"; };
+		4A0670A524D22B6C0098683A /* SessionActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionActionCell.swift; sourceTree = "<group>"; };
+		4A0670A724D2CE360098683A /* AttachmentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachmentCell.swift; sourceTree = "<group>"; };
+		4A0670A924D33C160098683A /* Data+ImageToPDFConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+ImageToPDFConverter.swift"; sourceTree = "<group>"; };
+		4A0BB9912471C385008F4682 /* SessionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsViewModel.swift; sourceTree = "<group>"; };
+		4A0BB9942471C415008F4682 /* GenericDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericDataSource.swift; sourceTree = "<group>"; };
+		4A0BB9962471C43D008F4682 /* DynamicValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicValue.swift; sourceTree = "<group>"; };
+		4A0BB99B2471C725008F4682 /* SessionsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsDataSource.swift; sourceTree = "<group>"; };
+		4A1DFB182469B7860043EB3F /* Comfortaa-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Bold.ttf"; sourceTree = "<group>"; };
+		4A1DFB192469B7860043EB3F /* Comfortaa-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Regular.ttf"; sourceTree = "<group>"; };
+		4A1DFB1A2469B7860043EB3F /* Comfortaa-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Light.ttf"; sourceTree = "<group>"; };
+		4A1DFB1E2469BA5D0043EB3F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4A1DFB252469F51A0043EB3F /* SessionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsViewController.swift; sourceTree = "<group>"; };
+		4A1DFB28246A086E0043EB3F /* UIColor_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor_Extension.swift; sourceTree = "<group>"; };
+		4A1DFB2A246A08C00043EB3F /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		4A1DFB2D246A09FF0043EB3F /* SessionsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsService.swift; sourceTree = "<group>"; };
+		4A1DFB32246A0A930043EB3F /* SessionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionCell.swift; sourceTree = "<group>"; };
+		4A1DFB35246A14880043EB3F /* MaahitaSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaahitaSession.swift; sourceTree = "<group>"; };
+		4A1DFB37246AD2E10043EB3F /* SessionsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsHeaderView.swift; sourceTree = "<group>"; };
+		4A1DFB3A246ADAD50043EB3F /* SessionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewModel.swift; sourceTree = "<group>"; };
+		4A1DFB3C246B16060043EB3F /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
+		4A1DFB3E246B17FC0043EB3F /* ProfilePicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePicView.swift; sourceTree = "<group>"; };
+		4A1DFB40246B1E470043EB3F /* UICollectionviewOverlappingLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionviewOverlappingLayout.swift; sourceTree = "<group>"; };
+		4A1DFB42246CAF5A0043EB3F /* DashboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCell.swift; sourceTree = "<group>"; };
+		4A1DFB44246CB1340043EB3F /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
+		4A1DFB46246CBBD30043EB3F /* LiveSessionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveSessionCell.swift; sourceTree = "<group>"; };
+		4A1DFB4C246CC0180043EB3F /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		4A1DFB4E246CC6130043EB3F /* PaddedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddedLabel.swift; sourceTree = "<group>"; };
+		4A1DFB50246D05070043EB3F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		4A1DFB52246D06B50043EB3F /* SessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewController.swift; sourceTree = "<group>"; };
+		4A1DFB54246D3A450043EB3F /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		4A1DFB56246D75110043EB3F /* MaahitaTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaahitaTextField.swift; sourceTree = "<group>"; };
+		4A1DFB58246D75570043EB3F /* UITextFiled+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextFiled+Extension.swift"; sourceTree = "<group>"; };
+		4A1DFB5A246E93BF0043EB3F /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		4A2BB7B02472D28800DD55C6 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		4A2BB7B22473D87B00DD55C6 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		4A2BB7B4247414D200DD55C6 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		4A2BB7B624745FC200DD55C6 /* Comfortaa-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-SemiBold.ttf"; sourceTree = "<group>"; };
+		4A2BB7B724745FC300DD55C6 /* Comfortaa-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Medium.ttf"; sourceTree = "<group>"; };
+		4A2BB7BA247476CC00DD55C6 /* SessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionView.swift; sourceTree = "<group>"; };
+		4A2BB7BC2474808600DD55C6 /* PanCloseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanCloseViewController.swift; sourceTree = "<group>"; };
+		4A2BB7BF24751D0400DD55C6 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		4A2BB7C124754DD700DD55C6 /* SessionDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDetailViewModel.swift; sourceTree = "<group>"; };
+		4A2BB7C324755C7C00DD55C6 /* MaahitaUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaahitaUser.swift; sourceTree = "<group>"; };
+		4A2BB7C524755DC900DD55C6 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		4ABFE3C6245C8F80008A66FA /* maahita.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = maahita.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4ABFE3C9245C8F80008A66FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4ABFE3D2245C8F86008A66FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4ABFE3D5245C8F86008A66FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4ABFE3D7245C8F86008A66FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4AD3E5CA24A4FB4400C454DB /* UserProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileCell.swift; sourceTree = "<group>"; };
+		4AEA12A7246EA6C000764785 /* UserAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthService.swift; sourceTree = "<group>"; };
+		4AEA12A9246EBC2300764785 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		4AEA12AB246EC83400764785 /* SessionViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewProtocol.swift; sourceTree = "<group>"; };
+		4AEA12AD246F23DE00764785 /* MeetingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingViewController.swift; sourceTree = "<group>"; };
+		4AEA12B3247067B800764785 /* ReloginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReloginViewController.swift; sourceTree = "<group>"; };
+		4AEA12B524707A5500764785 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		4AEA12B724707E9500764785 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		4AEA12BA2471129F00764785 /* maahitaDebug.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = maahitaDebug.entitlements; sourceTree = "<group>"; };
+		4AEA12BB2471129F00764785 /* maahitaRelease.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = maahitaRelease.entitlements; sourceTree = "<group>"; };
+		4AFAE2FA24770EEA008D64BE /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
+		4AFAE2FC24771840008D64BE /* FeedbackRequestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackRequestCell.swift; sourceTree = "<group>"; };
+		4AFAE2FE24785338008D64BE /* DashboardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardService.swift; sourceTree = "<group>"; };
+		4AFAE30024785771008D64BE /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		4AFAE3022478758C008D64BE /* HeaderViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewDataSource.swift; sourceTree = "<group>"; };
+		4AFAE30424787602008D64BE /* SessionsHeaderDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsHeaderDataSource.swift; sourceTree = "<group>"; };
+		4AFAE306247879A8008D64BE /* SessionsHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsHeaderViewModel.swift; sourceTree = "<group>"; };
+		4AFAE30824791182008D64BE /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
+		4AFAE30A24797008008D64BE /* CosmosDistrib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CosmosDistrib.swift; sourceTree = "<group>"; };
+		4AFAE30C2479724A008D64BE /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		4AFAE30E24797375008D64BE /* SessionFeedbackDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionFeedbackDataSource.swift; sourceTree = "<group>"; };
+		4AFAE310247973CC008D64BE /* Feedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
+		4AFAE31224797422008D64BE /* FeedbackCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackCellViewModel.swift; sourceTree = "<group>"; };
+		4AFAE31424797654008D64BE /* FeedbackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackCell.swift; sourceTree = "<group>"; };
+		4AFAE31824798A17008D64BE /* FeedbackDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackDataSource.swift; sourceTree = "<group>"; };
+		4AFAE31A24798CC9008D64BE /* FeedbackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewModel.swift; sourceTree = "<group>"; };
+		4AFAE31C24799258008D64BE /* FeedbackService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackService.swift; sourceTree = "<group>"; };
+		4AFD178824C52B410084A1FC /* SessionsHeaderCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsHeaderCollectionView.swift; sourceTree = "<group>"; };
+		4AFD178A24C5302C0084A1FC /* NavigationUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationUtility.swift; sourceTree = "<group>"; };
+		4AFD186D24C79FC40084A1FC /* CompletedSessionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedSessionsViewController.swift; sourceTree = "<group>"; };
+		4AFD18CE24CF64030084A1FC /* SessionPresenterControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionPresenterControl.swift; sourceTree = "<group>"; };
+		4AFD18D024CF67D70084A1FC /* AddSessionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSessionCell.swift; sourceTree = "<group>"; };
+		4AFD18D224CF69F80084A1FC /* SessionRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionRequestViewController.swift; sourceTree = "<group>"; };
+		B9D69712DEFDDD74E4A000FA /* Pods-maahita.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-maahita.debug.xcconfig"; path = "Target Support Files/Pods-maahita/Pods-maahita.debug.xcconfig"; sourceTree = "<group>"; };
+		C193943224F2E4AB00BDB3BD /* SessionFeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionFeedbackView.swift; sourceTree = "<group>"; };
+		C1E644512527DC3200F1E636 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		EB573690682B5F61DE566C28 /* Pods_maahita.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_maahita.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4ABFE3C3245C8F80008A66FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86FCF3A25351DCE9CD2F9AB0 /* Pods_maahita.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		15A826E59F67CEC4B59B7198 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EB573690682B5F61DE566C28 /* Pods_maahita.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4A0BB9932471C3F0008F4682 /* Generic */ = {
+			isa = PBXGroup;
+			children = (
+				4A0BB9942471C415008F4682 /* GenericDataSource.swift */,
+				4AFAE3022478758C008D64BE /* HeaderViewDataSource.swift */,
+				4AFAE31824798A17008D64BE /* FeedbackDataSource.swift */,
+			);
+			path = Generic;
+			sourceTree = "<group>";
+		};
+		4A1DFB172469B7720043EB3F /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				4A1DFB182469B7860043EB3F /* Comfortaa-Bold.ttf */,
+				4A2BB7B724745FC300DD55C6 /* Comfortaa-Medium.ttf */,
+				4A2BB7B624745FC200DD55C6 /* Comfortaa-SemiBold.ttf */,
+				4A1DFB1A2469B7860043EB3F /* Comfortaa-Light.ttf */,
+				4A1DFB192469B7860043EB3F /* Comfortaa-Regular.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		4A1DFB202469BB770043EB3F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4A1DFB252469F51A0043EB3F /* SessionsViewController.swift */,
+				4A1DFB50246D05070043EB3F /* LoginViewController.swift */,
+				4A1DFB52246D06B50043EB3F /* SessionViewController.swift */,
+				4A1DFB54246D3A450043EB3F /* UserProfileViewController.swift */,
+				4A1DFB5A246E93BF0043EB3F /* RegisterViewController.swift */,
+				4AEA12AD246F23DE00764785 /* MeetingViewController.swift */,
+				4AEA12B3247067B800764785 /* ReloginViewController.swift */,
+				4A2BB7B4247414D200DD55C6 /* AlertViewController.swift */,
+				4A2BB7BC2474808600DD55C6 /* PanCloseViewController.swift */,
+				4AFAE2FA24770EEA008D64BE /* FeedbackViewController.swift */,
+				4AFD186D24C79FC40084A1FC /* CompletedSessionsViewController.swift */,
+				4AFD18D224CF69F80084A1FC /* SessionRequestViewController.swift */,
+				C1E644512527DC3200F1E636 /* HomeViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		4A1DFB27246A07AE0043EB3F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4A1DFB28246A086E0043EB3F /* UIColor_Extension.swift */,
+				4A2BB7B02472D28800DD55C6 /* UIView+Extension.swift */,
+				4A1DFB2A246A08C00043EB3F /* UICollectionView+Extension.swift */,
+				4A1DFB40246B1E470043EB3F /* UICollectionviewOverlappingLayout.swift */,
+				4A1DFB4C246CC0180043EB3F /* Date+Extension.swift */,
+				4A1DFB4E246CC6130043EB3F /* PaddedLabel.swift */,
+				4A1DFB56246D75110043EB3F /* MaahitaTextField.swift */,
+				4A1DFB58246D75570043EB3F /* UITextFiled+Extension.swift */,
+				4AEA12A9246EBC2300764785 /* UIImageView.swift */,
+				4AEA12B524707A5500764785 /* UIViewController+Extension.swift */,
+				4AEA12B724707E9500764785 /* UIFont+Extension.swift */,
+				4A2BB7B22473D87B00DD55C6 /* UIImage+Extension.swift */,
+				4AFAE30A24797008008D64BE /* CosmosDistrib.swift */,
+				4AFAE30C2479724A008D64BE /* UITableView+Extension.swift */,
+				4A06709F24D1C10C0098683A /* UITextField+Extensions.swift */,
+				4A0670A924D33C160098683A /* Data+ImageToPDFConverter.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4A1DFB2C246A09D10043EB3F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				4A1DFB2D246A09FF0043EB3F /* SessionsService.swift */,
+				4AEA12A7246EA6C000764785 /* UserAuthService.swift */,
+				4A2BB7C524755DC900DD55C6 /* UserService.swift */,
+				4AFAE2FE24785338008D64BE /* DashboardService.swift */,
+				4AFAE31C24799258008D64BE /* FeedbackService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		4A1DFB31246A0A710043EB3F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4A1DFB32246A0A930043EB3F /* SessionCell.swift */,
+				4A1DFB37246AD2E10043EB3F /* SessionsHeaderView.swift */,
+				4A1DFB3C246B16060043EB3F /* UserProfileView.swift */,
+				4A1DFB3E246B17FC0043EB3F /* ProfilePicView.swift */,
+				4A1DFB42246CAF5A0043EB3F /* DashboardCell.swift */,
+				4A1DFB44246CB1340043EB3F /* StatsView.swift */,
+				4A1DFB46246CBBD30043EB3F /* LiveSessionCell.swift */,
+				4AEA12AB246EC83400764785 /* SessionViewProtocol.swift */,
+				4A2BB7BA247476CC00DD55C6 /* SessionView.swift */,
+				4AFAE2FC24771840008D64BE /* FeedbackRequestCell.swift */,
+				4AFAE31424797654008D64BE /* FeedbackCell.swift */,
+				4AD3E5CA24A4FB4400C454DB /* UserProfileCell.swift */,
+				4AFD178824C52B410084A1FC /* SessionsHeaderCollectionView.swift */,
+				4AFD18CE24CF64030084A1FC /* SessionPresenterControl.swift */,
+				4AFD18D024CF67D70084A1FC /* AddSessionCell.swift */,
+				4A0670A124D1D6A50098683A /* MaahitaAlertView.swift */,
+				4A0670A524D22B6C0098683A /* SessionActionCell.swift */,
+				4A0670A724D2CE360098683A /* AttachmentCell.swift */,
+				C193943224F2E4AB00BDB3BD /* SessionFeedbackView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4A1DFB34246A14790043EB3F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4A0BB9962471C43D008F4682 /* DynamicValue.swift */,
+				4A1DFB35246A14880043EB3F /* MaahitaSession.swift */,
+				4A2BB7C324755C7C00DD55C6 /* MaahitaUser.swift */,
+				4AFAE30824791182008D64BE /* Dashboard.swift */,
+				4AFAE310247973CC008D64BE /* Feedback.swift */,
+				4A0670A324D1F69E0098683A /* SessionRequest.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4A1DFB39246ADAC20043EB3F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4A0BB99B2471C725008F4682 /* SessionsDataSource.swift */,
+				4A1DFB3A246ADAD50043EB3F /* SessionViewModel.swift */,
+				4A0BB9912471C385008F4682 /* SessionsViewModel.swift */,
+				4A2BB7C124754DD700DD55C6 /* SessionDetailViewModel.swift */,
+				4AFAE30024785771008D64BE /* DashboardViewModel.swift */,
+				4AFAE30424787602008D64BE /* SessionsHeaderDataSource.swift */,
+				4AFAE306247879A8008D64BE /* SessionsHeaderViewModel.swift */,
+				4AFAE30E24797375008D64BE /* SessionFeedbackDataSource.swift */,
+				4AFAE31224797422008D64BE /* FeedbackCellViewModel.swift */,
+				4AFAE31A24798CC9008D64BE /* FeedbackViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4A2BB7BE24751CF200DD55C6 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				4A2BB7BF24751D0400DD55C6 /* Strings.swift */,
+				4AFD178A24C5302C0084A1FC /* NavigationUtility.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		4ABFE3BD245C8F80008A66FA = {
+			isa = PBXGroup;
+			children = (
+				4ABFE3C8245C8F80008A66FA /* maahita */,
+				4ABFE3C7245C8F80008A66FA /* Products */,
+				6C5B17F119BC35A0C2AAB07F /* Pods */,
+				15A826E59F67CEC4B59B7198 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4ABFE3C7245C8F80008A66FA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4ABFE3C6245C8F80008A66FA /* maahita.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4ABFE3C8245C8F80008A66FA /* maahita */ = {
+			isa = PBXGroup;
+			children = (
+				4A2BB7BE24751CF200DD55C6 /* Utility */,
+				4A0BB9932471C3F0008F4682 /* Generic */,
+				4AEA12BA2471129F00764785 /* maahitaDebug.entitlements */,
+				4AEA12BB2471129F00764785 /* maahitaRelease.entitlements */,
+				4A1DFB39246ADAC20043EB3F /* ViewModel */,
+				4A1DFB34246A14790043EB3F /* Model */,
+				4A1DFB31246A0A710043EB3F /* View */,
+				4A1DFB2C246A09D10043EB3F /* Service */,
+				4A1DFB27246A07AE0043EB3F /* Extensions */,
+				4A1DFB202469BB770043EB3F /* ViewController */,
+				4A1DFB1E2469BA5D0043EB3F /* GoogleService-Info.plist */,
+				4A1DFB172469B7720043EB3F /* Font */,
+				4ABFE3C9245C8F80008A66FA /* AppDelegate.swift */,
+				4ABFE3D2245C8F86008A66FA /* Assets.xcassets */,
+				4ABFE3D4245C8F86008A66FA /* LaunchScreen.storyboard */,
+				4ABFE3D7245C8F86008A66FA /* Info.plist */,
+			);
+			path = maahita;
+			sourceTree = "<group>";
+		};
+		6C5B17F119BC35A0C2AAB07F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B9D69712DEFDDD74E4A000FA /* Pods-maahita.debug.xcconfig */,
+				462C20EAE9E1D9B0E86EB0C7 /* Pods-maahita.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4ABFE3C5245C8F80008A66FA /* maahita */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4ABFE3DA245C8F86008A66FA /* Build configuration list for PBXNativeTarget "maahita" */;
+			buildPhases = (
+				12EE57278C68B5C20C19B3AC /* [CP] Check Pods Manifest.lock */,
+				4ABFE3C2245C8F80008A66FA /* Sources */,
+				4ABFE3C3245C8F80008A66FA /* Frameworks */,
+				4ABFE3C4245C8F80008A66FA /* Resources */,
+				47F7BE3B78F36CF3EF10D9C2 /* [CP] Embed Pods Frameworks */,
+				6AF998486EB0494852F9EF30 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = maahita;
+			productName = maahita;
+			productReference = 4ABFE3C6245C8F80008A66FA /* maahita.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4ABFE3BE245C8F80008A66FA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "Jagan Kumar Mudila";
+				TargetAttributes = {
+					4ABFE3C5245C8F80008A66FA = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 4ABFE3C1245C8F80008A66FA /* Build configuration list for PBXProject "maahita" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4ABFE3BD245C8F80008A66FA;
+			packageReferences = (
+			);
+			productRefGroup = 4ABFE3C7245C8F80008A66FA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4ABFE3C5245C8F80008A66FA /* maahita */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4ABFE3C4245C8F80008A66FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A1DFB1B2469B7860043EB3F /* Comfortaa-Bold.ttf in Resources */,
+				4ABFE3D6245C8F86008A66FA /* LaunchScreen.storyboard in Resources */,
+				4A2BB7B924745FC300DD55C6 /* Comfortaa-Medium.ttf in Resources */,
+				4ABFE3D3245C8F86008A66FA /* Assets.xcassets in Resources */,
+				4A1DFB1C2469B7860043EB3F /* Comfortaa-Regular.ttf in Resources */,
+				4A2BB7B824745FC300DD55C6 /* Comfortaa-SemiBold.ttf in Resources */,
+				4A1DFB1D2469B7860043EB3F /* Comfortaa-Light.ttf in Resources */,
+				4A1DFB1F2469BA5D0043EB3F /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		12EE57278C68B5C20C19B3AC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-maahita-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		47F7BE3B78F36CF3EF10D9C2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-maahita/Pods-maahita-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-maahita/Pods-maahita-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-maahita/Pods-maahita-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6AF998486EB0494852F9EF30 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-maahita/Pods-maahita-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-maahita/Pods-maahita-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-maahita/Pods-maahita-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4ABFE3C2245C8F80008A66FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A2BB7BD2474808600DD55C6 /* PanCloseViewController.swift in Sources */,
+				4AFAE31924798A17008D64BE /* FeedbackDataSource.swift in Sources */,
+				4AEA12B624707A5500764785 /* UIViewController+Extension.swift in Sources */,
+				4A2BB7C024751D0400DD55C6 /* Strings.swift in Sources */,
+				4AFAE31324797422008D64BE /* FeedbackCellViewModel.swift in Sources */,
+				4AFAE30524787602008D64BE /* SessionsHeaderDataSource.swift in Sources */,
+				4A2BB7B5247414D200DD55C6 /* AlertViewController.swift in Sources */,
+				4A0BB99C2471C725008F4682 /* SessionsDataSource.swift in Sources */,
+				4A1DFB51246D05070043EB3F /* LoginViewController.swift in Sources */,
+				4A2BB7C424755C7C00DD55C6 /* MaahitaUser.swift in Sources */,
+				4AFAE307247879A8008D64BE /* SessionsHeaderViewModel.swift in Sources */,
+				4A2BB7B32473D87B00DD55C6 /* UIImage+Extension.swift in Sources */,
+				4AFAE31B24798CC9008D64BE /* FeedbackViewModel.swift in Sources */,
+				4A0BB9952471C415008F4682 /* GenericDataSource.swift in Sources */,
+				4AFD18D124CF67D70084A1FC /* AddSessionCell.swift in Sources */,
+				4AFAE2FD24771840008D64BE /* FeedbackRequestCell.swift in Sources */,
+				4A1DFB59246D75570043EB3F /* UITextFiled+Extension.swift in Sources */,
+				4A1DFB43246CAF5A0043EB3F /* DashboardCell.swift in Sources */,
+				4AFD186E24C79FC40084A1FC /* CompletedSessionsViewController.swift in Sources */,
+				4AEA12AC246EC83400764785 /* SessionViewProtocol.swift in Sources */,
+				4AEA12B4247067B800764785 /* ReloginViewController.swift in Sources */,
+				4AFAE30924791182008D64BE /* Dashboard.swift in Sources */,
+				4A2BB7B12472D28800DD55C6 /* UIView+Extension.swift in Sources */,
+				4AFD18CF24CF64030084A1FC /* SessionPresenterControl.swift in Sources */,
+				4A0670A824D2CE360098683A /* AttachmentCell.swift in Sources */,
+				4AEA12AA246EBC2300764785 /* UIImageView.swift in Sources */,
+				4A1DFB3B246ADAD50043EB3F /* SessionViewModel.swift in Sources */,
+				4A0670AA24D33C160098683A /* Data+ImageToPDFConverter.swift in Sources */,
+				4A1DFB41246B1E470043EB3F /* UICollectionviewOverlappingLayout.swift in Sources */,
+				4AFAE30F24797375008D64BE /* SessionFeedbackDataSource.swift in Sources */,
+				4A1DFB55246D3A450043EB3F /* UserProfileViewController.swift in Sources */,
+				4AFAE31D24799258008D64BE /* FeedbackService.swift in Sources */,
+				4A2BB7C624755DC900DD55C6 /* UserService.swift in Sources */,
+				4A1DFB2B246A08C00043EB3F /* UICollectionView+Extension.swift in Sources */,
+				4A1DFB47246CBBD30043EB3F /* LiveSessionCell.swift in Sources */,
+				4A1DFB262469F51A0043EB3F /* SessionsViewController.swift in Sources */,
+				4A1DFB38246AD2E10043EB3F /* SessionsHeaderView.swift in Sources */,
+				4A1DFB36246A14880043EB3F /* MaahitaSession.swift in Sources */,
+				4ABFE3CA245C8F80008A66FA /* AppDelegate.swift in Sources */,
+				4A0670A024D1C10C0098683A /* UITextField+Extensions.swift in Sources */,
+				C193943324F2E4AB00BDB3BD /* SessionFeedbackView.swift in Sources */,
+				4AFAE31524797654008D64BE /* FeedbackCell.swift in Sources */,
+				4A1DFB3D246B16060043EB3F /* UserProfileView.swift in Sources */,
+				4A1DFB33246A0A930043EB3F /* SessionCell.swift in Sources */,
+				4AFAE30124785771008D64BE /* DashboardViewModel.swift in Sources */,
+				4A0670A624D22B6C0098683A /* SessionActionCell.swift in Sources */,
+				4AEA12AE246F23DE00764785 /* MeetingViewController.swift in Sources */,
+				4AEA12B824707E9500764785 /* UIFont+Extension.swift in Sources */,
+				4A0BB9922471C385008F4682 /* SessionsViewModel.swift in Sources */,
+				4AFD178924C52B410084A1FC /* SessionsHeaderCollectionView.swift in Sources */,
+				C1E644522527DC3200F1E636 /* HomeViewController.swift in Sources */,
+				4AFAE30B24797008008D64BE /* CosmosDistrib.swift in Sources */,
+				4AFAE311247973CC008D64BE /* Feedback.swift in Sources */,
+				4A1DFB57246D75110043EB3F /* MaahitaTextField.swift in Sources */,
+				4AEA12A8246EA6C000764785 /* UserAuthService.swift in Sources */,
+				4A1DFB45246CB1340043EB3F /* StatsView.swift in Sources */,
+				4AFAE2FF24785338008D64BE /* DashboardService.swift in Sources */,
+				4A0670A224D1D6A50098683A /* MaahitaAlertView.swift in Sources */,
+				4AFAE3032478758C008D64BE /* HeaderViewDataSource.swift in Sources */,
+				4A1DFB2E246A09FF0043EB3F /* SessionsService.swift in Sources */,
+				4A0BB9972471C43D008F4682 /* DynamicValue.swift in Sources */,
+				4AFAE2FB24770EEA008D64BE /* FeedbackViewController.swift in Sources */,
+				4A1DFB29246A086E0043EB3F /* UIColor_Extension.swift in Sources */,
+				4AFD178B24C5302C0084A1FC /* NavigationUtility.swift in Sources */,
+				4AFAE30D2479724A008D64BE /* UITableView+Extension.swift in Sources */,
+				4A2BB7C224754DD700DD55C6 /* SessionDetailViewModel.swift in Sources */,
+				4AFD18D324CF69F80084A1FC /* SessionRequestViewController.swift in Sources */,
+				4A1DFB4D246CC0180043EB3F /* Date+Extension.swift in Sources */,
+				4A1DFB53246D06B50043EB3F /* SessionViewController.swift in Sources */,
+				4A0670A424D1F69E0098683A /* SessionRequest.swift in Sources */,
+				4A1DFB5B246E93BF0043EB3F /* RegisterViewController.swift in Sources */,
+				4AD3E5CB24A4FB4400C454DB /* UserProfileCell.swift in Sources */,
+				4A2BB7BB247476CC00DD55C6 /* SessionView.swift in Sources */,
+				4A1DFB4F246CC6130043EB3F /* PaddedLabel.swift in Sources */,
+				4A1DFB3F246B17FC0043EB3F /* ProfilePicView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4ABFE3D4245C8F86008A66FA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4ABFE3D5245C8F86008A66FA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4ABFE3D8245C8F86008A66FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4ABFE3D9245C8F86008A66FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4ABFE3DB245C8F86008A66FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9D69712DEFDDD74E4A000FA /* Pods-maahita.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = maahita/maahitaDebug.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H6A3R6WG95;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = maahita/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.4;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobile.maahita;
+				PRODUCT_NAME = maahita;
+				PROVISIONING_PROFILE_SPECIFIER = maahita_dev;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4ABFE3DC245C8F86008A66FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 462C20EAE9E1D9B0E86EB0C7 /* Pods-maahita.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = maahita/maahitaRelease.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H6A3R6WG95;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = maahita/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.4;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobile.maahita;
+				PRODUCT_NAME = maahita;
+				PROVISIONING_PROFILE_SPECIFIER = maahita_dist;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4ABFE3C1245C8F80008A66FA /* Build configuration list for PBXProject "maahita" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4ABFE3D8245C8F86008A66FA /* Debug */,
+				4ABFE3D9245C8F86008A66FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4ABFE3DA245C8F86008A66FA /* Build configuration list for PBXNativeTarget "maahita" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4ABFE3DB245C8F86008A66FA /* Debug */,
+				4ABFE3DC245C8F86008A66FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4ABFE3BE245C8F80008A66FA /* Project object */;
+}

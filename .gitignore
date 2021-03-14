@@ -1,0 +1,12 @@
+## Build generated
+build/
+DerivedData/
+
+## Locally installed Pods
+Pods/
+
+maahita.xcodeproj/xcuserdata/
+maahita.xcworkspace/xcuserdata/
+
+.DS_Store
+GoogleService-Info.plist
