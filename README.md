@@ -1,4 +1,4 @@
-# maahita.iOS
+# māhita.iOS
 iOS application for māhita
 
 māhita is an open volunteering platform for enthusiastic teahers out there to reach and teach deserved and needy students. We are in pursuit of makin this platform more open and available to all.
