@@ -7,12 +7,13 @@
 //
 
 import UIKit
-import JitsiMeet
+import JitsiMeetSDK
 import SwiftyJWT
+import SwiftyCrypto
 
 class MeetingViewController : UIViewController {
     
-    let jitsiServerURL = "https://meet.jit.si/"
+    fileprivate var _isPresenter: Bool = false
     
     lazy var jitsiMeetView: JitsiMeetView = {
         let jitsiView = JitsiMeetView()
@@ -64,77 +65,78 @@ class MeetingViewController : UIViewController {
         super.viewWillDisappear(animated)
         
         if (self.isMovingFromParent) {
-          UIDevice.current.setValue(Int(UIInterfaceOrientation.portrait.rawValue), forKey: "orientation")
+            UIDevice.current.setValue(Int(UIInterfaceOrientation.portrait.rawValue), forKey: "orientation")
         }
     }
     
     @objc func canRotate() -> Void {}
     
     func joinMeeting(isPresenter: Bool) {
-//        if isPresenter {
-//            var token: String?
-//
-//            if let user = UserAuthService.instance.user, !user.isAnonymous {
-//                let alg = JWTAlgorithm.hs256("maahitaauthenticationsecretGSHOggudJaTlIMrYzaNCOAAOJBI3")
-//                let headerWithKeyId = JWTHeader.init(keyId: "maahitakeyid")
-//                var payload = JWTPayload()
-//                payload.customFields = ["context": EncodableValue(value: ["user": EncodableValue(value: ["avatar": EncodableValue(value: user.photoURL),
-//                                                                                   "name": EncodableValue(value: user.displayName ?? "Presenter"),
-//                                                                                   "email": EncodableValue(value: user.email),
-//                                                                                   "id": EncodableValue(value: user.uid)])]),
-//                      "aud": EncodableValue(value: "maahitamobile"),
-//                      "iss": EncodableValue(value: "maahitajwttokenapplicationid"),
-//                      "sub": EncodableValue(value: "meet.jit.si"),
-//                      "room": EncodableValue(value: self.meetingID)]
-//
-//                let jwtWithKeyId = try? JWT.init(payload: payload, algorithm: alg, header: headerWithKeyId)
-//                token = jwtWithKeyId?.rawString
-//            }
-//
-//            let meetingOptions = JitsiMeetConferenceOptions.fromBuilder { (builder) in
-//                builder.serverURL = URL(string: self.jitsiServerURL)
-//                builder.room = self.meetingID
-//                builder.audioOnly = false
-//                builder.audioMuted = true
-//                builder.videoMuted = true
-//                builder.token = token ?? ""
-//                builder.subject = self.meetingtitle
-//                builder.setFeatureFlag("live-streaming.enabled", withBoolean: false)
-//                builder.setFeatureFlag("invite.enabled", withBoolean: false)
-//                builder.setFeatureFlag("recording.enabled", withBoolean: false)
-//                builder.setFeatureFlag("pip.enabled", withBoolean: false)
-//                builder.welcomePageEnabled = false
-//            }
-//
-//            self.jitsiMeetView.join(meetingOptions)
-//        } else {
-            var userInfo = JitsiMeetUserInfo(displayName: "Guest user", andEmail: nil, andAvatar: nil)
-            
-            if let user = UserAuthService.instance.user, !user.isAnonymous {
-                let displayName = user.displayName ?? "māhita mobile"
-                let avatarURL = user.photoURL
-                
-                userInfo = JitsiMeetUserInfo(displayName: displayName, andEmail: nil, andAvatar: avatarURL)
-            }
-            
-            let meetingOptions = JitsiMeetConferenceOptions.fromBuilder { (builder) in
-                builder.serverURL = URL(string: self.jitsiServerURL)
-                builder.room = self.meetingID
-                builder.audioOnly = false
-                builder.audioMuted = true
-                builder.videoMuted = true
-                builder.userInfo = userInfo
-                builder.subject = self.meetingtitle
-                builder.setFeatureFlag("live-streaming.enabled", withBoolean: false)
-                builder.setFeatureFlag("invite.enabled", withBoolean: false)
-                builder.setFeatureFlag("recording.enabled", withBoolean: false)
-                builder.setFeatureFlag("pip.enabled", withBoolean: false)
-                builder.welcomePageEnabled = false
-            }
-            
-            self.jitsiMeetView.join(meetingOptions)
+        self._isPresenter = isPresenter
+        var token: String = ""
+        
+        guard let jaasData = self.readJaasProperties(),
+              let jaasServerURL = jaasData["JaasServerURL"] as? String,
+              let jaasAppID = jaasData["JaasAPPID"] as? String,
+              let jaasKID = jaasData["JaasKID"] as? String,
+              let jaasPrivateKey = jaasData["JaasPrivateKey"] as? String else {
+            return
         }
-//    }
+        
+        guard let rsaKey = try? RSAKey(base64String: jaasPrivateKey, keyType: .PRIVATE) else { return }
+        
+        let user = UserAuthService.instance.user
+        let alg = JWTAlgorithm.rs256(rsaKey)
+        let headerWithKeyId = JWTHeader(keyId: jaasKID)
+        var payload = JWTPayload()
+        let nbf = Int(Date().timeIntervalSince1970)
+        let exp = Int(Date().addingTimeInterval(2 * 60 * 60).timeIntervalSince1970)
+        payload.customFields = ["context": EncodableValue(value: ["user": EncodableValue(value: ["avatar": EncodableValue(value: user?.photoURL),
+                                                                                                 "name": EncodableValue(value: user?.displayName ?? "māhita user"),
+                                                                                                 "email": EncodableValue(value: user?.email),
+                                                                                                 "id": EncodableValue(value: user?.uid),
+                                                                                                 "moderator": EncodableValue(value: isPresenter.description)]),
+                                                                  "features": EncodableValue(value: ["livestreaming": "false",
+                                                                                                     "recording": "false",
+                                                                                                     "outbound-call": "false",
+                                                                                                     "transcription": "false"])]),
+                                "room": EncodableValue(value: self.meetingID),
+                                "aud": EncodableValue(value: "jitsi")
+        ]
+        payload.issuer = "chat"
+        payload.subject = jaasAppID
+        payload.expiration = exp
+        payload.notBefore = nbf
+        
+        guard let jwtWithKeyId = JWT(payload: payload, algorithm: alg, header: headerWithKeyId) else { return }
+        token = jwtWithKeyId.rawString
+        let meetingOptions = JitsiMeetConferenceOptions.fromBuilder { (builder) in
+            builder.serverURL = URL(string: jaasServerURL)
+            builder.token = token
+            builder.room = "\(jaasAppID)/\(self.meetingID)"
+            builder.subject = self.meetingtitle
+            builder.audioMuted = true
+            builder.videoMuted = true
+            builder.audioOnly = false
+            builder.setFeatureFlag("live-streaming.enabled", withBoolean: false)
+            builder.setFeatureFlag("invite.enabled", withBoolean: false)
+            builder.setFeatureFlag("recording.enabled", withBoolean: false)
+            builder.setFeatureFlag("pip.enabled", withBoolean: false)
+            builder.welcomePageEnabled = false
+        }
+        
+        self.jitsiMeetView.join(meetingOptions)
+    }
+    
+    fileprivate func readJaasProperties() -> [String: Any]? {
+        guard let plistPath = Bundle.main.path(forResource: "GoogleService-Info", ofType: "plist") else { return nil }
+        guard let plistXML = FileManager.default.contents(atPath: plistPath) else { return nil }
+        var propertyListFormat =  PropertyListSerialization.PropertyListFormat.xml
+        guard let plistData = try? PropertyListSerialization.propertyList(from: plistXML,
+                                                                          options: .mutableContainersAndLeaves,
+                                                                          format: &propertyListFormat) as? [String: Any] else { return nil }
+        return plistData
+    }
 }
 
 extension MeetingViewController: JitsiMeetViewDelegate {
@@ -144,8 +146,6 @@ extension MeetingViewController: JitsiMeetViewDelegate {
     }
     
     func conferenceTerminated(_ data: [AnyHashable : Any]!) {
-        self.dismiss(animated: true) {
-            
-        }
+        self.dismiss(animated: true, completion: nil)
     }
 }

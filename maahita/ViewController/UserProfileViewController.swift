@@ -169,9 +169,9 @@ class UserProfileViewController: PanCloseViewController {
     }
     
     func doVerifyEmail() {
-        UserAuthService.instance.verifyemail(completion: { (success, error) in
+        UserAuthService.instance.verifyemail(completion: { [weak self] (success, error) in
             if success {
-                self.showToast(message: "A verification email has been sent.")
+                self?.showToast(message: "A verification email has been sent.")
             }
         })
     }
@@ -187,11 +187,11 @@ class UserProfileViewController: PanCloseViewController {
         
         let alert = UIAlertController(title: "Confirmation", message: "Are you sure, you would like to leave us?", preferredStyle: .alert)
 
-        alert.addAction(UIAlertAction(title: "Yes, I am", style: .default, handler: { (action: UIAlertAction!) in
+        alert.addAction(UIAlertAction(title: "Yes, I am", style: .default, handler: { [weak self] (action: UIAlertAction!) in
             let reloginViewController = ReloginViewController()
             reloginViewController.isDeleteAccount = true
             reloginViewController.delegate = self
-            self.present(reloginViewController, animated: true, completion: nil)
+            self?.present(reloginViewController, animated: true, completion: nil)
         }))
         
         alert.addAction(UIAlertAction(title: "No, not now", style: .destructive, handler: nil))
@@ -202,10 +202,10 @@ class UserProfileViewController: PanCloseViewController {
         if let user = UserAuthService.instance.user, !user.isAnonymous {
             let alert = UIAlertController(title: "Confirmation", message: "Are you sure, you would like to logout?", preferredStyle: .alert)
 
-            alert.addAction(UIAlertAction(title: "Yes, I am", style: .default, handler: { (action: UIAlertAction!) in
+            alert.addAction(UIAlertAction(title: "Yes, I am", style: .default, handler: { [weak self] (action: UIAlertAction!) in
                 //Logout
                 UserAuthService.instance.signout()
-                self.dismiss(animated: true, completion: nil)
+                self?.dismiss(animated: true, completion: nil)
             }))
             
             alert.addAction(UIAlertAction(title: "No, not now", style: .destructive, handler: nil))

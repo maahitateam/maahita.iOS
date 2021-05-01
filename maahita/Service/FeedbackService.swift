@@ -53,10 +53,10 @@ class FeedbackService {
                     } else {
                         var sessions: [MaahitaSession] = []
                         for doc in query!.documents {
-                            doc.reference.parent.parent?.getDocument(completion: { (snapshot, error) in
+                            doc.reference.parent.parent?.getDocument(completion: { [weak self](snapshot, error) in
                                 if let docSnapshot = snapshot {
                                     sessions.append(MaahitaSession(snapshot: docSnapshot))
-                                    self.feedbackDelegate?.refresh(feedback: sessions)
+                                    self?.feedbackDelegate?.refresh(feedback: sessions)
                                 }
                             })
                         }
@@ -92,14 +92,14 @@ class FeedbackService {
         
         self.dbStore?.collection("sessions/\(sessionID)/feedback")
             .document(userid)
-            .updateData(feedbackData, completion: { (error) in
+            .updateData(feedbackData, completion: { [weak self] (error) in
                 if error != nil {
                     print(error?.localizedDescription)
                     completion(false)
                     return
                 }
                 
-                self.dbStore?.collection("sessions/\(sessionID)/feedback")
+                self?.dbStore?.collection("sessions/\(sessionID)/feedback")
                     .document(userid)
                     .updateData(["overall": overallRating,
                                  "issubmitted": true,

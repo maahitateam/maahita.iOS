@@ -71,9 +71,9 @@ extension UIViewController {
                             x: self.view.frame.origin.x,
                             y: self.view.frame.size.height
                         )
-                }, completion: { (isCompleted) in
+                }, completion: { [weak self](isCompleted) in
                     if isCompleted {
-                        self.dismiss(animated: false, completion: nil)
+                        self?.dismiss(animated: false, completion: nil)
                     }
                 })
             } else {

@@ -67,12 +67,12 @@ class UserAuthService {
             } else {
                 let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
                 changeRequest?.displayName = fullName
-                changeRequest?.commitChanges(completion: { (error) in
+                changeRequest?.commitChanges(completion: { [weak self] (error) in
                     if error != nil {
                         completion(false, error)
                     }
                     else {
-                        if let delegates = self.delegates {
+                        if let delegates = self?.delegates {
                             for delegate in delegates {
                                 delegate.refreshUser()
                             }
@@ -111,14 +111,14 @@ class UserAuthService {
     }
     
     func removeaccount(completion: @escaping(Bool, Error?) -> Void) {
-        Auth.auth().currentUser?.delete(completion: { (error) in
+        Auth.auth().currentUser?.delete(completion: { [weak self] (error) in
             if error != nil {
                 completion(false, error)
                 return
             }
             UserDefaults.standard.set(nil, forKey: Strings.EMAIL_ID)
             //After removing the user, sign-in anonymously
-            self.signInAnonymous()
+            self?.signInAnonymous()
             completion(true, nil)
         })
     }
@@ -145,12 +145,12 @@ class UserAuthService {
     func save(name: String, completion: @escaping(Bool, Error?) -> Void) {
         let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
         changeRequest?.displayName = name
-        changeRequest?.commitChanges(completion: { (error) in
+        changeRequest?.commitChanges(completion: { [weak self](error) in
             if error != nil {
                 completion(false, error)
             }
             else {
-                if let delegates = self.delegates {
+                if let delegates = self?.delegates {
                     for delegate in delegates {
                         delegate.refreshUser()
                     }
@@ -185,12 +185,12 @@ class UserAuthService {
                 
                 let changeRequest = UserAuthService.instance.user?.createProfileChangeRequest()
                 changeRequest?.photoURL = downloadURL
-                changeRequest?.commitChanges(completion: { (error) in
+                changeRequest?.commitChanges(completion: { [weak self](error) in
                     if error != nil {
                         completion(false, error)
                     }
                     else {
-                        if let delegates = self.delegates {
+                        if let delegates = self?.delegates {
                             for delegate in delegates {
                                 delegate.refreshUser()
                             }

@@ -100,6 +100,17 @@ class LoginViewController: PanCloseViewController {
         return login
     }()
     
+    lazy var googleLoginButton: UIButton = {
+        let login = UIButton()
+        login.setTitle("Login with Google", for: .normal)
+        login.titleLabel?.font = UIFont(name: "Comfortaa-Bold", size: 15.0)
+        login.setTitleColor(.white, for: .normal)
+        login.backgroundColor = .cerulean
+        login.addTarget(self, action: #selector(doLogin), for: .touchUpInside)
+        login.translatesAutoresizingMaskIntoConstraints = false
+        return login
+    }()
+    
     lazy var registerButton: UIButton = {
         let register = UIButton()
         register.setTitle("Register", for: .normal)

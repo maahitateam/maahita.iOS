@@ -233,18 +233,18 @@ class RegisterViewController: PanCloseViewController {
                 return
             }
             
-            UserAuthService.instance.register(fullName: displayname, email: username, password: password) { (success, error) in
+            UserAuthService.instance.register(fullName: displayname, email: username, password: password) { [weak self] (success, error) in
                 if(success) {
                     let logoutAlert = UIAlertController(title: "Welcome", message: "Thanks for registering with us. Hope you will have a great learning experience with us.", preferredStyle: .alert)
 
-                    logoutAlert.addAction(UIAlertAction(title: "Let's go", style: .default, handler: { (action: UIAlertAction!) in
-                        self.dismiss(animated: true) {
-                            self.delegate?.registered()
+                    logoutAlert.addAction(UIAlertAction(title: "Let's go", style: .default, handler: { [weak self] (action: UIAlertAction!) in
+                        self?.dismiss(animated: true) { [weak self] in
+                            self?.delegate?.registered()
                         }
                     }))
-                    self.present(logoutAlert, animated: true, completion: nil)
+                    self?.present(logoutAlert, animated: true, completion: nil)
                 } else {
-                    self.errorLabel.text = error?.localizedDescription
+                    self?.errorLabel.text = error?.localizedDescription
                 }
             }
         }
