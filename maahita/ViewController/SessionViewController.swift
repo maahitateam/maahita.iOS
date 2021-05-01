@@ -170,13 +170,13 @@ extension SessionViewController: SessionPresenterControlDelegate {
         linkBuilder?.options = DynamicLinkComponentsOptions()
         linkBuilder?.options?.pathLength = .short
 
-        linkBuilder?.shorten(completion: { (url, warnings, error) in
+        linkBuilder?.shorten(completion: { [weak self] (url, warnings, error) in
             sharemessage.append(url!)
             let activityVC = UIActivityViewController(activityItems: sharemessage, applicationActivities: nil)
             activityVC.title = "Share Session"
             activityVC.excludedActivityTypes = [.print, .airDrop, .assignToContact, .copyToPasteboard, .postToVimeo, .addToReadingList, .message, .postToWeibo]
-            activityVC.popoverPresentationController?.sourceView = self.view
-            self.present(activityVC, animated: true, completion: nil)
+            activityVC.popoverPresentationController?.sourceView = self?.view
+            self?.present(activityVC, animated: true, completion: nil)
         })
     }
 }

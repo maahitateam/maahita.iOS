@@ -8,7 +8,7 @@
 
 import UIKit
 import Firebase
-import JitsiMeet
+import JitsiMeetSDK
 import UserNotifications
 
 @UIApplicationMain
@@ -102,10 +102,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 }
 
 extension AppDelegate: MessagingDelegate {
-    func messaging(_ messaging: Messaging, didReceive remoteMessage: MessagingRemoteMessage) {
-    }
-    
-    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
+    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
         UserDefaults.standard.set(fcmToken, forKey: "deviceToken")
     }
 }
+
+//extension AppDelegate: MessagingDelegate {
+//    func messaging(_ messaging: Messaging, didReceive remoteMessage: MessagingRemoteMessage) {
+//    }
+//
+//    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
+//        UserDefaults.standard.set(fcmToken, forKey: "deviceToken")
+//    }
+//}

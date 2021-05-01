@@ -7,7 +7,6 @@
 	<key>com.apple.developer.associated-domains</key>
 	<array>
 		<string>mobile.maahita.com</string>
-		<string>meetings.maahita.com</string>
 	</array>
 </dict>
 </plist>
